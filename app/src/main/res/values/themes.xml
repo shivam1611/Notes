@@ -3,6 +3,17 @@
     <style name="Base.Theme.Notes" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorAccent">@color/tertiary</item>
+        <item name="background">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
     </style>
 
     <style name="Theme.Notes" parent="Base.Theme.Notes" />
