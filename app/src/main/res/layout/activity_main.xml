@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
+        android:id="@+id/createNoteButton"
         android:backgroundTint="@color/primary"
         android:src="@drawable/outline_add_2_24"
         app:fabSize="normal"
@@ -70,8 +71,6 @@
             android:layout_gravity="center_vertical"
             android:src="@drawable/outline_mic_24" />
     </LinearLayout>
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"

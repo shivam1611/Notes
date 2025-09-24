@@ -11,6 +11,8 @@
     <color name="tertiary">#9aa7f0</color>
     <color name = "input">#F6F6F6</color>
     <color name="background">#ffffff</color>
+    <color name = "error">#FB4C4C</color>
+    <color name = "colorOnError">#FFFFFF</color>
     <color name="surface">#DCF8FB</color>
     <color name="colorOnBackground">#161616</color>
 </resources>

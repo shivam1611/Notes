@@ -14,6 +14,8 @@
         <item name="background">@color/background</item>
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name = "colorError">@color/error</item>
+        <item name = "colorOnError">@color/colorOnError</item>
     </style>
 
     <style name="Theme.Notes" parent="Base.Theme.Notes" />

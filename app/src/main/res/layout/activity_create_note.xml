@@ -5,6 +5,66 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="30dp"
     tools:context=".ui.CreateNote">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Create Note"
+        android:textColor="@color/colorOnBackground"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Title"
+        android:padding="12dp"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/colorOnBackground"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Start typing..."
+        android:fontFamily="@font/inter"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:maxLines="60"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:backgroundTint="@color/background"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/etTtitle"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textSize="17dp"
+        android:text="Save"
+        android:id="@+id/createNoteButton"
+        android:fontFamily="@font/open_sans"
+        android:elevation="8dp"
+        android:height="60dp"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
