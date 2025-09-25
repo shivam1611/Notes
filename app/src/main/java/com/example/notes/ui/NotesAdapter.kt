@@ -4,14 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notes.data.MyDatabase
 import com.example.notes.data.entities.NoteEntity
-import com.example.notes.databinding.ActivityMainBinding
 import com.example.notes.databinding.ItemNoteBinding
 import kotlin.concurrent.thread
 
@@ -21,6 +17,7 @@ class NotesAdapter(var notesList: List<NoteEntity>, val context: Context) :
         val title = binding.title
         val content = binding.content
     }
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int

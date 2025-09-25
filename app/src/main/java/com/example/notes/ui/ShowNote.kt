@@ -19,5 +19,11 @@ class ShowNote : AppCompatActivity() {
         val note = intent.getSerializableExtra("note") as NoteEntity
         binding.title.text = note.title
         binding.body.text = note.content
+        binding.editBtn.setOnClickListener {
+            val editBottomSheet = EditBottomSheet(note.id)
+            editBottomSheet.show(supportFragmentManager, "editBottomSheet")
+        }
+
+
     }
 }

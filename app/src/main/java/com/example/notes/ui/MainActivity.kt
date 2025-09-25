@@ -23,20 +23,35 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         myRecyclerView = binding.recyclerView
-        thread{
-            val database = MyDatabase.getDatabase(this)
-            val noteDao = database.noteDao()
-            notesList = noteDao.getAllNotes()
-            runOnUiThread {
-                myRecyclerView.layoutManager = LinearLayoutManager(this)
-                myRecyclerView.adapter = NotesAdapter(notesList, this)
-                binding.createNoteButton.setOnClickListener {
-                    val intent = Intent(this, CreateNote::class.java)
-                    startActivity(intent)
-                }
-            }
+        onSetupLayoutNotes()
+
+        // Create Note
+        binding.createNoteButton.setOnClickListener {
+            val intent = Intent(this, CreateNote::class.java)
+            startActivity(intent)
         }
     }
 
 
+}
+
+private fun MainActivity.onSetupLayoutNotes() {
+    thread {
+        val database = MyDatabase.getDatabase(this)
+        val noteDao = database.noteDao()
+        notesList = noteDao.getAllNotes()
+        myRecyclerView.adapter?.notifyDataSetChanged()
+        if (notesList.isEmpty()) {
+            runOnUiThread {
+                binding.emptyView.visibility = View.VISIBLE
+            }
+        } else {
+            runOnUiThread {
+                binding.emptyView.visibility = View.GONE
+                myRecyclerView.layoutManager = LinearLayoutManager(this)
+                myRecyclerView.adapter = NotesAdapter(notesList, this)
+
+            }
+        }
+    }
 }
